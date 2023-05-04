@@ -1,3 +1,4 @@
+# kittygram/cats/serializers.py
 from rest_framework import serializers
 
 from .models import Cat
@@ -6,4 +7,5 @@ from .models import Cat
 class CatSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cat
-        fields = '__all__'
+        # В прошлом уроке fields = '__all__' изменили на:
+        fields = ('name', 'color', 'birth_year')
